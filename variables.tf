@@ -54,20 +54,17 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
-# Key name for the EC2 instances (SSH key)
 variable "key_name" {
   description = "The name of the SSH key pair to use for EC2 instances."
-  type        = string
+  default     = "generated-key" # Default from ssh-key module
 }
 
-# Public subnet ID (output from networking module)
 variable "public_subnet_id" {
   description = "The ID of the public subnet."
-  type        = string
+  default     = ""
 }
 
-# Private subnet ID (output from networking module)
 variable "private_subnet_id" {
   description = "The ID of the private subnet."
-  type        = string
+  default     = ""
 }
